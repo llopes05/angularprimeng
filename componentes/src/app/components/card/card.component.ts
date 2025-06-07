@@ -10,3 +10,5 @@ import { ButtonModule } from 'primeng/button'; // Atenção
 export class CardComponent {
 
 }
+// link: https://primeng.org/card.
+// é necessário importar o CardModule e ButtonModule do primeng no componente CardComponent.
