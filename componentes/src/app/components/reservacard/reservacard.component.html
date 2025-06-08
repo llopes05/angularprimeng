@@ -1,0 +1,51 @@
+<h1>inicio novo card</h1>
+<p-card styleClass="reserva-card">
+  <ng-template pTemplate="header">
+    <div class="header-image-container">
+      <div class="overlay">
+        <span class="reserva-text">RESERVA</span>
+        <i class="pi pi-futbol"></i>
+      </div>
+      <img src="https://primefaces.org/cdn/primeng/images/galleria/galleria7.jpg" alt="Imagem da Quadra">
+    </div>
+  </ng-template>
+
+  <ng-template pTemplate="body">
+    <div class="info-container">
+      <div class="profile-icon">
+        <i class="pi pi-user"></i>
+      </div>
+      <div class="text-info">
+        <h3 class="title">LOREM IPSUM DOLOR SIT AMET</h3>
+        <div class="location">
+          <i class="pi pi-map-marker"></i>
+          <span>Avenida Brasil, 0000, Cidade/UF.</span>
+        </div>
+        <div class="rating-container">
+          <p-rating [(ngModel)]="valorAvaliacao" [readonly]="true" [stars]="5"></p-rating>
+          <span class="rating-value">4.0 (0 avaliações)</span>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Lorem ipsum dolor amet, consectetuer adipiscing elit. Netus ante cras lacus at mauris eu. Id molestie egestas sit ullamcorper mi condimentum ut fusce dictum. Inceptos congue dui primis v...
+    </p>
+    <div class="tags-container">
+      <p-tag value="Vestiário" styleClass="p-tag-custom"></p-tag>
+      <p-tag value="Futebol" styleClass="p-tag-custom"></p-tag>
+      <p-tag value="Basquete" styleClass="p-tag-custom"></p-tag>
+      <p-tag value="Vôlei" styleClass="p-tag-custom"></p-tag>
+    </div>
+  </ng-template>
+
+  <ng-template pTemplate="footer">
+    <div class="footer-actions">
+      <div class="left-actions">
+        <i class="pi pi-calendar"></i>
+        <i class="pi pi-map-marker"></i>
+      </div>
+      <p-button label="Reservar" icon="pi pi-search" styleClass="p-button-reservar"></p-button>
+    </div>
+  </ng-template>
+</p-card>
+<h1>fim novo card</h1>

@@ -1,11 +1,85 @@
-.card-image {
-  width: 100%;
-  height: 180px;      /* ajuste a altura conforme desejar */
-  object-fit: cover;  /* ou use 'contain' para mostrar a imagem inteira sem corte */
-  display: block;
+/*
+  Usa-se :host ::ng-deep para "perfurar" a encapsulação de estilo do Angular
+  e aplicar estilos aos componentes filhos do PrimeNG (p-button, p-tag, etc.).
+*/
+
+/* Card principal */
+:host ::ng-deep .checkin-card {
+  width: 320px; /* Largura do card */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  padding: 0; /* Remove padding interno do card para controlar via templates */
 }
-.footer-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+/* Remove a borda padrão do header e footer */
+:host ::ng-deep .checkin-card .p-card-header,
+:host ::ng-deep .checkin-card .p-card-footer {
+  border: none;
+  padding: 0;
+}
+
+/* Ajusta o conteúdo do corpo do card (título e subtítulo) */
+:host ::ng-deep .checkin-card .p-card-body {
+  padding: 0 24px 24px 24px; /* Adiciona padding somente no corpo */
+}
+
+/* Header que contém a tag */
+.card-header-content {
+  padding: 16px 24px 8px 24px;
+}
+
+/* Tag "EM ANDAMENTO" */
+:host ::ng-deep .status-tag {
+  background-color: #FEF3C7; /* Amarelo claro */
+  color: #9A3412; /* Laranja escuro */
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* Título principal */
+.card-title {
+  font-size: 1.5rem; /* 24px */
+  color: #333;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Subtítulo */
+.card-subtitle {
+  font-size: 1rem; /* 16px */
+  color: #888;
+  margin: 4px 0 0 0;
+}
+
+/* Destaque no subtítulo */
+.recurso-destaque {
+  color: #4CAF50; /* Verde */
+  font-weight: 600;
+}
+
+/* Botão de Check-in */
+:host ::ng-deep .checkin-button.p-button {
+  background-color: #ADFF2F; /* Verde limão brilhante */
+  border-color: #ADFF2F;
+  color: #1a1a1a; /* Cor do texto (preto/cinza escuro) */
+  width: 100%; /* Ocupa toda a largura do footer */
+  border-radius: 0 0 8px 8px; /* Arredonda somente cantos inferiores */
+  padding: 16px 0; /* Aumenta a altura do botão */
+  font-size: 1.125rem; /* 18px */
+  font-weight: 700;
+}
+
+/* Estilo do botão ao passar o mouse (hover) */
+:host ::ng-deep .checkin-button.p-button:hover {
+  background-color: #9BE02D; /* Um tom de verde mais escuro para o hover */
+  border-color: #9BE02D;
+}
+
+/* Ícone do botão */
+:host ::ng-deep .checkin-button .p-button-icon {
+  font-size: 1.25rem; /* Tamanho do ícone */
+  font-weight: bold;
 }

@@ -1,0 +1,172 @@
+/*
+  :host ::ng-deep é usado para aplicar estilos aos componentes filhos do PrimeNG
+  que têm sua própria estilização encapsulada. É essencial para a customização.
+*/
+
+:host ::ng-deep .reserva-card {
+  width: 400px;
+  border-radius: 16px; /* Borda mais arredondada */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border: 1px solid #f0f0f0;
+  padding: 0;
+  overflow: hidden; /* Garante que nada "vaze" do card */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+:host ::ng-deep .reserva-card .p-card-header,
+:host ::ng-deep .reserva-card .p-card-body,
+:host ::ng-deep .reserva-card .p-card-footer {
+  padding: 0;
+  border: none;
+}
+
+/* Header com Imagem */
+.header-image-container {
+  position: relative;
+  width: 100%;
+  height: 150px;
+}
+
+.header-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com transparência */
+  color: #1a1a1a;
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.reserva-text {
+  font-size: 1.1em;
+  margin-right: 8px;
+}
+
+.overlay .pi-futbol {
+  font-size: 1.2em;
+}
+
+/* Corpo do Card */
+:host ::ng-deep .reserva-card .p-card-content {
+  padding: 16px 24px;
+}
+
+.info-container {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.profile-icon {
+  background-color: #f0f0f0;
+  color: #333;
+  border-radius: 50%;
+  min-width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8em;
+  margin-right: 16px;
+}
+
+.text-info .title {
+  margin: 0 0 4px 0;
+  color: #212529;
+  font-size: 1.15em;
+  font-weight: 700;
+}
+
+.text-info .location {
+  color: #6c757d;
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.location i {
+  margin-right: 6px;
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+}
+
+:host ::ng-deep .p-rating .p-rating-icon {
+    color: #FFC107; /* Cor das estrelas */
+    font-size: 1.1rem;
+}
+
+.rating-value {
+  color: #6c757d;
+  font-size: 0.9em;
+  margin-left: 8px;
+}
+
+.description {
+  color: #495057;
+  line-height: 1.5;
+  margin: 0 0 20px 0;
+  font-size: 0.95em;
+}
+
+/* Tags */
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+:host ::ng-deep .p-tag-custom.p-tag {
+  background-color: #e9f5e9;
+  color: #2E7D32;
+  font-weight: 500;
+  border-radius: 16px;
+  padding: 6px 12px;
+}
+
+/* Footer */
+:host ::ng-deep .reserva-card .p-card-footer {
+  background-color: #fff;
+  padding: 16px 24px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.footer-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-actions i {
+  font-size: 1.6em;
+  color: #495057;
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+:host ::ng-deep .p-button-reservar.p-button {
+  background-color: #ADFF2F;
+  border-color: #ADFF2F;
+  color: #1a1a1a;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+:host ::ng-deep .p-button-reservar.p-button:hover {
+  background-color: #9ace2d;
+  border-color: #9ace2d;
+}
